@@ -1,17 +1,20 @@
-import {
-  TooltipProvider
-} from "@/components/ui/tooltip";
-
+import { TooltipProvider } from "@/components/ui/tooltip";
 import TanstackProvider from "@/providers/TanstackProvider";
-import { ThemeProvider } from "@/providers/ThemeProvider";
 import { ContextProviders } from "@/redux/provider";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], // you can include other weights too
-  style: ['normal', 'italic'],
+import dotenv from 'dotenv';
+dotenv.config();
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -25,21 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body className={roboto.className} >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        ><TanstackProvider>
-            <ContextProviders>
-              <TooltipProvider>
-                {children}
-              </TooltipProvider>
-            </ContextProviders>
-          </TanstackProvider>
-        </ ThemeProvider>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <TanstackProvider>
+          <ContextProviders>
+            <TooltipProvider>
+              {children}
+            </TooltipProvider>
+          </ContextProviders>
+        </TanstackProvider>
       </body>
     </html>
   );

@@ -1,8 +1,8 @@
 
-import IGetService from './iget-service';
 import IHttpService from './ihttp-service';
+import IStudentService from './istudent-service';
 
 export default interface IUnitOfService {
   HttpService: IHttpService;
-  GetService: IGetService
+  StudentService: IStudentService;
 }
