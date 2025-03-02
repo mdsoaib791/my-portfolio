@@ -1,11 +1,10 @@
+import HomePageWrapper from "@/components/home"
 
-import HomePageWrapper from "@/components/home";
-
-function Page() {
+export default function HomePage() {
 
   return (
-    <HomePageWrapper />
+    <>
+      <HomePageWrapper />
+    </>
   )
 }
-
-export default Page;

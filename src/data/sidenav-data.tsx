@@ -1,113 +1,138 @@
-import { FaAddressCard, FaClipboardList, FaProjectDiagram, FaRegCalendarCheck, FaRegCalendarPlus, FaRegStar, FaUmbrellaBeach, FaUsers } from "react-icons/fa";
-import { IoDocumentText } from "react-icons/io5";
-import { MdDashboard } from "react-icons/md";
-import { PiClockUserBold } from "react-icons/pi";
-import { SiHelpdesk, SiPagespeedinsights } from "react-icons/si";
-import { TfiCommentsSmiley } from "react-icons/tfi";
+import { FaChalkboardTeacher, FaCog, FaFileAlt, FaSchool, FaUsers } from 'react-icons/fa';
+import { MdDashboard } from 'react-icons/md';
 
 export const MenuList = [
     {
         "title": "Dashboard",
         "path": "/dashboard",
         "icon": <MdDashboard />,
-        "id": "dashboard"
+        "id": "dashboard",
     },
     {
-        "title": "PMS",
-        "path": "/dashboard/pms",
-        "icon": <FaProjectDiagram />,
-        "id": "pms"
-    },
-    {
-        "title": "LMS",
-        "path": "/dashboard/lms",
-        "icon": <TfiCommentsSmiley />,
-        "id": "lms",
+        "title": "Students",
+        "path": "/dashboard/students",
+        "icon": <FaUsers />,
+        "id": "students",
         "subItems": [
             {
-                "title": "Request New Leave",
-                "path": "/dashboard/request-new-leave",
-                "icon": <FaRegCalendarPlus />,
-                "id": "request-new-leave"
+                "title": "All Students",
+                "path": "/dashboard/students/all",
+                "id": "students-all"
             },
             {
-                "title": "General Leave",
-                "path": "/dashboard/general-leave",
-                "icon": <FaClipboardList />,
-                "id": "general-leave"
+                "title": "Add Student",
+                "path": "/dashboard/students/add",
+                "id": "students-add"
             },
             {
-                "title": "Compensatory Leave",
-                "path": "/dashboard/compensatory-leave",
-                "icon": <FaClipboardList />,
-                "id": "compensatory-leave"
+                "title": "Attendance",
+                "path": "/dashboard/students/attendance",
+                "id": "students-attendance"
             },
             {
-                "title": "Request Compensatory Leave",
-                "path": "/dashboard/request-compensatory-leave",
-                "icon": <FaRegCalendarPlus />,
-                "id": "request-compensatory-leave"
+                "title": "Grades",
+                "path": "/dashboard/students/grades",
+                "id": "students-grades"
             }
-        ],
-    }, {
-        "title": "Helpdesk Portal",
-        "path": "/dashboard/helpdesk-portal",
-        "icon": <SiHelpdesk />,
-        "id": "helpdesk-portal"
+        ]
     },
     {
-        "title": "Page Speed",
-        "path": "/dashboard/pagespeed",
-        "icon": <SiPagespeedinsights />,
-        "id": "pagespeed"
+        "title": "Teachers",
+        "path": "/dashboard/teachers",
+        "icon": <FaChalkboardTeacher />,
+        "id": "teachers",
+        "subItems": [
+            {
+                "title": "All Teachers",
+                "path": "/dashboard/teachers/all",
+                "id": "teachers-all"
+            },
+            {
+                "title": "Add Teacher",
+                "path": "/dashboard/teachers/add",
+                "id": "teachers-add"
+            },
+            {
+                "title": "Attendance",
+                "path": "/dashboard/teachers/attendance",
+                "id": "teachers-attendance"
+            },
+            {
+                "title": "Schedule",
+                "path": "/dashboard/teachers/schedule",
+                "id": "teachers-schedule"
+            }
+        ]
     },
     {
-        "title": "Work Log",
-        "path": "/dashboard/worklog",
-        "icon": <FaClipboardList />,
-        "id": "worklog"
+        "title": "Classes",
+        "path": "/dashboard/classes",
+        "icon": <FaSchool />,
+        "id": "classes",
+        "subItems": [
+            {
+                "title": "All Classes",
+                "path": "/dashboard/classes/all",
+                "id": "classes-all"
+            },
+            {
+                "title": "Assign Teacher",
+                "path": "/dashboard/classes/assign-teacher",
+                "id": "classes-assign"
+            },
+            {
+                "title": "Class Schedule",
+                "path": "/dashboard/classes/schedule",
+                "id": "classes-schedule"
+            }
+        ]
     },
     {
-        "title": "My Documents",
-        "path": "/dashboard/mydocuments",
-        "icon": <IoDocumentText />,
-        "id": "mydocuments"
+        "title": "Exams",
+        "path": "/dashboard/exams",
+        "icon": <FaFileAlt />,
+        "id": "exams",
+        "subItems": [
+            {
+                "title": "All Exams",
+                "path": "/dashboard/exams/all",
+                "id": "exams-all"
+            },
+            {
+                "title": "Create Exam",
+                "path": "/dashboard/exams/create",
+                "id": "exams-create"
+            },
+            {
+                "title": "Results",
+                "path": "/dashboard/exams/results",
+                "id": "exams-results"
+            }
+        ]
     },
     {
-        "title": "My Team",
-        "path": "/dashboard/myteam",
-        "icon": <FaUsers />,
-        "id": "myteam"
-    },
-    {
-        "title": "Holiday",
-        "path": "/dashboard/holiday",
-        "icon": <FaUmbrellaBeach />,
-        "id": "holiday"
-    },
-    {
-        "title": "Working Days",
-        "path": "/dashboard/workingdays",
-        "icon": <FaRegCalendarCheck />,
-        "id": "workingdays"
-    },
-    {
-        "title": "Time Tracker",
-        "path": "/dashboard/timetracker",
-        "icon": <PiClockUserBold />,
-        "id": "timetracker"
-    },
-    {
-        "title": "Rating",
-        "path": "/dashboard/rating",
-        "icon": <FaRegStar />,
-        "id": "rating"
-    },
-    {
-        "title": "My Profile",
-        "path": "/dashboard/myprofile",
-        "icon": <FaAddressCard />,
-        "id": "myprofile"
-    },
-
+        "title": "Settings",
+        "path": "/dashboard/settings",
+        "icon": <FaCog />,
+        "id": "settings",
+        "subItems": [
+            {
+                "title": "General",
+                "path": "/dashboard/settings/general",
+                "id": "settings-general"
+            },
+            {
+                "title": "User Management",
+                "path": "/dashboard/settings/users",
+                "id": "settings-users"
+            }
+        ]
+    }
 ];
+
+
+
+
+
+
+
