@@ -1,20 +1,30 @@
+import Footer from "@/components/common/footer/Footer";
+import Header from "@/components/common/header/Header";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import TanstackProvider from "@/providers/TanstackProvider";
 import { ContextProviders } from "@/redux/provider";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Fira_Code, Marck_Script, Outfit } from "next/font/google";
 import "./globals.css";
-import dotenv from 'dotenv';
-dotenv.config();
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+
+// Font imports from Google Fonts
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fira-code",
+  display: "swap",
+});
+
+const marckScript = Marck_Script({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-marck-script",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,12 +40,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.variable} ${firaCode.variable} ${marckScript.variable} antialiased`}
       >
         <TanstackProvider>
           <ContextProviders>
             <TooltipProvider>
+              <Header />
               {children}
+              <Footer />
             </TooltipProvider>
           </ContextProviders>
         </TanstackProvider>

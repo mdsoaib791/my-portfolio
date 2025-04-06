@@ -1,18 +1,13 @@
-import React from 'react'
-import Header from './navigation/Header'
-import HomeBanner from './hero/HomeBanner'
-import Courses from './courses/Courses'
-import Contact from './contact/Contact'
-import Footer from './footer/Footer'
+import About from "./about";
+import Banner from "./banner";
+import Projects from "./projects";
 
-export default function HomePageWrapper() {
+export default function Index() {
     return (
         <div>
-            <Header />
-            <HomeBanner />
-            <Courses />
-            <Contact />
-            <Footer />
+            <Banner />
+            <About />
+            <Projects />
         </div>
     )
 }
