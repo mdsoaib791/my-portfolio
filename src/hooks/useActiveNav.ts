@@ -1,10 +1,8 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { usePathname } from 'next/navigation';
-
-
 
 // Define types for the nav items
 interface SubItem {
@@ -20,10 +18,10 @@ const useActiveNav = (navItems: NavItem[]): string[] => {
     const pathname = usePathname();
 
     // Function to determine active navigation paths
-    const getActiveNav = (items: NavItem[]): string[] => {
-        let active: string[] = [];
+    const getActiveNav = useCallback(() => {
+        const active: string[] = [];
 
-        items.forEach((item) => {
+        navItems.forEach((item) => {
             // Check if the current path starts with the item's path
             if (pathname.startsWith(item.path)) {
                 active.push(item.path); // Mark the parent item as active
@@ -39,10 +37,10 @@ const useActiveNav = (navItems: NavItem[]): string[] => {
         });
 
         return active;
-    };
+    }, [pathname, navItems]);
 
     // Memoize the result to prevent unnecessary recalculations
-    return useMemo(() => getActiveNav(navItems), [pathname, navItems]);
+    return useMemo(() => getActiveNav(), [getActiveNav]);
 };
 
 export default useActiveNav;

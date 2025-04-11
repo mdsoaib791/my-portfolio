@@ -13,15 +13,6 @@ import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import * as React from "react"
 
-const components = [
-    {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
-        description: "A modal dialog that interrupts the user with important content and expects a response.",
-    },
-    // other components...
-]
-
 export default function Header() {
     const [isOpen, setIsOpen] = React.useState(false)
 
