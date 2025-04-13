@@ -12,7 +12,7 @@ export default function Banner() {
                         <p className="text-background">
                             Crafting seamless digital experiences that elevate brands, engage users, and drive results through intuitive design and smart frontend development.
                         </p>
-                        <p>It&apos;s time to build something amazing!</p>
+                        <h2 className="text-xl text-background">It&apos;s time to build something amazing!</h2>
                         <div className="flex gap-4 flex-wrap items-center mt-5 pt-4 justify-center">
                             <Button>Learn More</Button>
                             <Button variant={"secondary"}>View My Work</Button>
