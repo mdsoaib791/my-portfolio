@@ -7,6 +7,8 @@ import type { Metadata } from "next";
 import { Fira_Code, Marck_Script, Outfit } from "next/font/google";
 import "./globals.css";
 
+import { Providers } from "@/providers/providers";
+
 // Font imports from Google Fonts
 const outfit = Outfit({
   subsets: ["latin"],
@@ -38,16 +40,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${outfit.variable} ${firaCode.variable} ${marckScript.variable} antialiased`}
       >
         <TanstackProvider>
           <ContextProviders>
             <TooltipProvider>
-              <Header />
-              {children}
-              <Footer />
+              <Providers>
+                <Header />
+                {children}
+                <Footer />
+              </Providers>
             </TooltipProvider>
           </ContextProviders>
         </TanstackProvider>

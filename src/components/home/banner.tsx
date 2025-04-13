@@ -6,7 +6,7 @@ export default function Banner() {
             <div className="container relative justify-center flex pb-[100px]">
                 <div className="max-w-4xl">
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold mb-4 text-background">
+                        <h1 className="text-4xl font-bold mb-4 bg-transparent  text-foreground">
                             Hello, I&apos;m <span className="font-extrabold marck-script-regular">Md Soaib Ansari</span>
                         </h1>
                         <p className="text-background">
