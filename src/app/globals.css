@@ -2,83 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apply base font globally if needed */
-body {
-  font-family: var(--font-outfit), sans-serif;
-  overflow-x: hidden;
-}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
 
-/* Optional: Use for code blocks */
-code,
-pre {
-  font-family: var(--font-fira-code), monospace;
-}
-
-/* Use this class where you want Marck Script */
-.marck-script-regular {
-  font-family: var(--font-marck-script), cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
-
-p {
-  margin-bottom: 8px;
-}
-
-:root {
-  --gradient: linear-gradient(to top left, #091E3A, #2F80ED, #2D9EE0);
-  --background: 213 77% 95%;
-  --foreground: 213 5% 10%;
-  --card: 213 50% 90%;
-  --card-foreground: 213 5% 15%;
-  --popover: 213 77% 95%;
-  --popover-foreground: 213 95% 10%;
-  --primary: 213 81% 41%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 213 30% 70%;
-  --secondary-foreground: 0 0% 0%;
-  --muted: 175 30% 85%;
-  --muted-foreground: 213 5% 35%;
-  --accent: 175 30% 80%;
-  --accent-foreground: 213 5% 15%;
-  --destructive: 0 77% 30%;
-  --destructive-foreground: 213 5% 90%;
-  --border: 213 30% 50%;
-  --input: 213 30% 24%;
-  --ring: 213 81% 41%;
-  --radius: 0.5rem;
-}
-
-.dark {
-  --gradient: linear-gradient(to top left, #091E3A, #2F80ED, #2D9EE0);
-  --background: 213 50% 10%;
-  --foreground: 213 5% 90%;
-  --card: 213 50% 10%;
-  --card-foreground: 213 5% 90%;
-  --popover: 213 50% 5%;
-  --popover-foreground: 213 5% 90%;
-  --primary: 213 81% 41%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 213 30% 20%;
-  --secondary-foreground: 0 0% 100%;
-  --muted: 175 30% 24%;
-  --muted-foreground: 213 5% 60%;
-  --accent: 175 30% 24%;
-  --accent-foreground: 213 5% 90%;
-  --destructive: 0 77% 30%;
-  --destructive-foreground: 213 5% 90%;
-  --border: 213 30% 24%;
-  --input: 213 30% 24%;
-  --ring: 213 81% 41%;
-  --radius: 0.5rem;
-}
-
 
 @layer base {
   * {
@@ -90,9 +69,6 @@ p {
   }
 }
 
-
-@layer utilities {
-  .bg-gradient {
-    background: var(--gradient);
-  }
+html {
+  scroll-behavior: smooth;
 }
