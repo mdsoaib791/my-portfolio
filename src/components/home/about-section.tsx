@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 
 export function AboutSection() {
   return (
@@ -7,7 +7,7 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            I'm a passionate developer with 5+ years of experience building web applications
+            I&apos;m a passionate developer with 5+ years of experience building web applications
           </p>
         </div>
 
@@ -20,12 +20,12 @@ export function AboutSection() {
 
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              I'm a full-stack developer with a passion for creating exceptional digital experiences. With over 5 years
+              I&apos;m a full-stack developer with a passion for creating exceptional digital experiences. With over 5 years
               of experience, I specialize in React, Next.js, and modern web technologies.
             </p>
 
             <p className="text-lg leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
+              When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or
               sharing my knowledge through blog posts and community talks.
             </p>
 
@@ -43,5 +43,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

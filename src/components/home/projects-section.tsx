@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { ExternalLink, Github } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
 export function ProjectsSection() {
@@ -16,7 +17,7 @@ export function ProjectsSection() {
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/demo-project.jpg",
       technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
       liveUrl: "#",
       githubUrl: "#",
@@ -25,7 +26,7 @@ export function ProjectsSection() {
       title: "Task Management App",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/demo-project.jpg",
       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
       liveUrl: "#",
       githubUrl: "#",
@@ -34,7 +35,7 @@ export function ProjectsSection() {
       title: "Weather Dashboard",
       description:
         "A responsive weather dashboard that displays current weather conditions and forecasts for multiple cities with beautiful visualizations.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/demo-project.jpg",
       technologies: ["Vue.js", "Chart.js", "Weather API", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
@@ -43,7 +44,7 @@ export function ProjectsSection() {
       title: "Portfolio Website",
       description:
         "A modern, responsive portfolio website built with Next.js and TypeScript, featuring dark mode and smooth animations.",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/demo-project.jpg",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       liveUrl: "#",
       githubUrl: "#",
@@ -64,9 +65,11 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-muted overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg"}
+                <Image
+                  src={project.image || "demo-project.jpg"}
                   alt={project.title}
+                  width={400}
+                  height={200}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>

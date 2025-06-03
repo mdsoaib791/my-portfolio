@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, Download } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -11,8 +11,10 @@ export function HeroSection() {
             Available for work
           </Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">John Doe</span>
+            Hi, I&apos;m{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              John Doe
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Full-stack developer passionate about creating beautiful, functional, and user-centered digital experiences.
@@ -43,5 +45,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

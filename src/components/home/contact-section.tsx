@@ -1,9 +1,15 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -12,17 +18,17 @@ export function ContactSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together
+            Have a project in mind? Let&apos;s discuss how we can work together
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Let's talk</h3>
+              <h3 className="text-2xl font-semibold mb-4">Let&apos;s talk</h3>
               <p className="text-muted-foreground mb-6">
-                I'm always interested in hearing about new projects and opportunities. Whether you're a company looking
-                to hire, or you're a fellow developer wanting to collaborate, I'd love to hear from you.
+                I&apos;m always interested in hearing about new projects and opportunities. Whether you&apos;re a company looking
+                to hire, or you&apos;re a fellow developer wanting to collaborate, I&apos;d love to hear from you.
               </p>
             </div>
 
@@ -45,7 +51,9 @@ export function ContactSection() {
           <Card>
             <CardHeader>
               <CardTitle>Send me a message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
+              <CardDescription>
+                Fill out the form below and I&apos;ll get back to you as soon as possible.
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <form className="space-y-4">
@@ -69,7 +77,11 @@ export function ContactSection() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Tell me about your project..." className="min-h-[120px]" />
+                  <Textarea
+                    id="message"
+                    placeholder="Tell me about your project..."
+                    className="min-h-[120px]"
+                  />
                 </div>
                 <Button type="submit" className="w-full">
                   <Send className="mr-2 h-4 w-4" />
@@ -81,5 +93,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
