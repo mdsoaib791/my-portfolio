@@ -1,31 +1,41 @@
-import { TooltipProvider } from "@/components/ui/tooltip";
-import TanstackProvider from "@/providers/TanstackProvider";
-import { ThemeProvider } from "@/providers/theme-provider";
-import { ContextProviders } from "@/redux/provider";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip"
+import TanstackProvider from "@/providers/TanstackProvider"
+import { ThemeProvider } from "@/providers/theme-provider"
+import { ContextProviders } from "@/redux/provider"
+import type { Metadata } from "next"
+import { Poppins } from "next/font/google"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+// ✅ Proper font variable name
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Add font weights as needed
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Md Soaib - Portfolio",
   description:
-    "Full-stack developer passionate about creating beautiful, functional, and user-centered digital experiences.",
+    "Frontend Developer specializing in React, Next.js, and React Native. Passionate about crafting scalable and user-friendly digital experiences.",
 }
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <TanstackProvider>
           <ContextProviders>
             <TooltipProvider>
-              <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
                 {children}
               </ThemeProvider>
             </TooltipProvider>
@@ -33,5 +43,5 @@ export default function RootLayout({
         </TanstackProvider>
       </body>
     </html>
-  );
+  )
 }

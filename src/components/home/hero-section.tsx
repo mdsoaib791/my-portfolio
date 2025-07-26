@@ -4,7 +4,7 @@ import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-16">
+    <section className="pt-40 pb-24  bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <Badge variant="secondary" className="mb-4">
@@ -13,11 +13,11 @@ export function HeroSection() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              John Doe
+              Soaib Ansari
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Full-stack developer passionate about creating beautiful, functional, and user-centered digital experiences.
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            I'm a Frontend Developer with 5+ years of experience crafting scalable web and mobile applications using React.js, Next.js, and React Native. I specialize in building clean, responsive interfaces and optimizing user experience.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export function HeroSection() {
             <Mail className="mr-2 h-4 w-4" />
             Get in touch
           </Button>
-          <Button variant="outline" size="lg" className="w-full sm:w-auto">
+          <Button variant="secondary" size="lg" className="w-full sm:w-auto">
             <Download className="mr-2 h-4 w-4" />
             Download CV
           </Button>
