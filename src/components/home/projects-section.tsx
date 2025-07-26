@@ -377,6 +377,7 @@ export default function ProjectsSection() {
                       </div>
 
                       <div className="space-y-4">
+
                         <div className="space-y-3">
                           <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
                             <Calendar className="h-4 w-4" />
