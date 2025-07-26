@@ -11,7 +11,7 @@ export function HeroSection() {
             Available for work
           </Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Hi, I&apos;m{" "}
+            I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Soaib Ansari
             </span>

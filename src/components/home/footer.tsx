@@ -25,7 +25,7 @@ export function Footer() {
                 <Mail className="h-5 w-5" />
               </Button>
             </div>
-            <p className="mt-2">© 2025 Md SOaib Ansari | Built with Nextjs and Tailwind</p>
+            <p className="text-muted-foreground">© 2025 Md SOaib Ansari | Built with Nextjs and Tailwind</p>
           </div>
         </div>
       </div>

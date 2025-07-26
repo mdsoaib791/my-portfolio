@@ -1,37 +1,30 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
+      title: "Frontend Developer",
+      company: "FirstBit DIgital Technologys Pvt Ltd.",
+      period: "2021 - Present",
       description:
         "Lead frontend development for multiple client projects, mentoring junior developers and implementing best practices for code quality and performance.",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      technologies: ["Expo", "React Native", "React", "Next.js", "TypeScript", "React Query", "Tailwind CSS", "express.js", "Node.js", "Redux", "Git", "Figma", "REST APIs", "Agile Methodologies", "Cross-Browser Compatibility", "Unit Testing", "Responsive Design", "Version Control", "Code Reviews", "Continuous Integration"],
     },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Agency Co.",
-      period: "2020 - 2022",
-      description:
-        "Developed and maintained web applications using modern technologies, collaborated with design teams to implement pixel-perfect UIs.",
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-    },
+
     {
       title: "Frontend Developer",
-      company: "Startup Hub",
-      period: "2019 - 2020",
+      company: "Bsit Software Services Pvt Ltd.",
+      period: "2019 - 2021",
       description:
         "Built responsive web applications and landing pages, optimized performance and implemented SEO best practices.",
-      technologies: ["Vue.js", "JavaScript", "SCSS", "Webpack"],
+      technologies: ["React", "JavaScript", "SCSS", "Webpack", "Bootstrap", "HTML", "CSS", "Git", "Figma", "REST APIs", "Agile Methodologies", "Cross-Browser Compatibility", "Unit Testing", "Responsive Design", "Version Control", "Code Reviews", "Continuous Integration"],
     },
   ]
 
   return (
-    <section id="experience" className="py-20 px-4 bg-muted/50">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="py-12 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

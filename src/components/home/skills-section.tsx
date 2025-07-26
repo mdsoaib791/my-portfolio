@@ -14,6 +14,12 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-12 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"> Skills</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            Here are some of the technologies and tools I work with regularly. My expertise spans across frontend and backend development, databases, design, and more.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
 
           <SkillCard
@@ -21,8 +27,6 @@ export function SkillsSection() {
             icon={FaCode}
             skills={[
               { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-              { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-              { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
               { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
               { name: "HTML/CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
             ]}
@@ -45,7 +49,6 @@ export function SkillsSection() {
             skills={[
               { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
               { name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-              { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
               { name: "REST APIs", logo: "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png" },
             ]}
           />
@@ -75,9 +78,9 @@ export function SkillsSection() {
             icon={FaPaintBrush}
             skills={[
               { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-              { name: "Adobe AI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg" },
-              { name: "UI/UX Design", logo: "https://img.icons8.com/fluency/48/user-experience.png" },
-              { name: "Prototyping", logo: "https://img.icons8.com/color/48/prototype.png" },
+              { name: "Adobe AI", logo: "/images/illustrator.svg" },
+              { name: "Photoshop", logo: "/images/photoshop.svg" },
+              { name: "UI/UX Design", logo: "/images/ui-ux-designer.jpg" },
             ]}
           />
 

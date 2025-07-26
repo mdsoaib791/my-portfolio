@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-10">
+    <section id="about" className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="rounded-2xl mb-8 md:mb-0 flex items-center justify-center">
@@ -18,18 +18,9 @@ export function AboutSection() {
 
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-            <p>
-              I&apos;m a passionate developer with 5+ years of experience building web applications
-            </p>
-            <p className="leading-relaxed">
-              I&apos;m a full-stack developer with a passion for creating exceptional digital experiences. With over 5 years
-              of experience, I specialize in React, Next.js, and modern web technologies.
-            </p>
-
-            <p className="leading-relaxed">
-              When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or
-              sharing my knowledge through blog posts and community talks.
-            </p>
+            <p className="text-muted-foreground">I&apos;m a Frontend Developer...</p>
+            <p className="text-muted-foreground">Over the years, I&apos;ve contributed...</p>
+            <p className="text-muted-foreground">Outside of coding, you&apos;ll often find me...</p>
 
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">What I do</h3>

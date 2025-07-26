@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FC } from "react";
 import { IconType } from "react-icons";
 
@@ -29,8 +30,14 @@ export const SkillCard: FC<SkillCardProps> = ({ title, icon: Icon, skills }) => 
             key={skill.name}
             className="flex items-center gap-2 bg-gray-100 text-sm text-gray-800 px-3 py-1 rounded-full"
           >
-            <img src={skill.logo} alt={skill.name} className="w-4 h-4" />
-            {skill.name}
+            <Image
+              src={skill.logo}
+              alt={skill.name}
+              width={40}
+              height={40}
+              className="rounded"
+            />
+            <p>{skill.name}</p>
           </div>
         ))}
       </div>

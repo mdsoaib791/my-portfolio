@@ -9,7 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Send } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -17,42 +17,20 @@ export function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground">
             Have a project in mind? Let&apos;s discuss how we can work together
           </p>
+
+          <p className="text-muted-foreground">Let&apos;s connect and build something great!</p>
+          <p className="text-muted-foreground">Don&apos;t hesitate to reach out.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Let&apos;s talk</h3>
-              <p className="text-muted-foreground mb-6">
-                I&apos;m always interested in hearing about new projects and opportunities. Whether you&apos;re a company looking
-                to hire, or you&apos;re a fellow developer wanting to collaborate, I&apos;d love to hear from you.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-muted-foreground" />
-                <span>john.doe@example.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-muted-foreground" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-muted-foreground" />
-                <span>San Francisco, CA</span>
-              </div>
-            </div>
-          </div>
-
-          <Card>
+        <div className="max-w-2xl mx-auto">
+          <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <CardHeader>
               <CardTitle>Send me a message</CardTitle>
-              <CardDescription>
-                Fill out the form below and I&apos;ll get back to you as soon as possible.
+              <CardDescription className="text-primary-foreground">
+                Fill out the form below and I'll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -80,7 +58,8 @@ export function ContactSection() {
                   <Textarea
                     id="message"
                     placeholder="Tell me about your project..."
-                    className="min-h-[120px]"
+                    className="min-h-[120px] placeholder:text-primary-foreground"
+                    aria-label="Message"
                   />
                 </div>
                 <Button type="submit" className="w-full">
