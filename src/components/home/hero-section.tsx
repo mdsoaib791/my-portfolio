@@ -17,7 +17,7 @@ export function HeroSection() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            I'm a Frontend Developer with 5+ years of experience crafting scalable web and mobile applications using React.js, Next.js, and React Native. I specialize in building clean, responsive interfaces and optimizing user experience.
+            I&apos;m a Frontend Developer with 5+ years of experience crafting scalable web and mobile applications using React.js, Next.js, and React Native. I specialize in building clean, responsive interfaces and optimizing user experience.
           </p>
         </div>
 
