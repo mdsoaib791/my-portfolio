@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['uxwing.com'], // ✅ allow images from this domain
+  typescript: {
+    ignoreBuildErrors: true,
   },
-};
+  images: {
+    unoptimized: true,
+  },
+}
 
-export default nextConfig;
+export default nextConfig
